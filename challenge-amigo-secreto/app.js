@@ -7,15 +7,18 @@ function formatarNome(nome) {
     .join(' ');
 }
 
+function adicionaItemNaLista(lista, item) {
+  const li = document.createElement('li');
+  li.textContent = item;
+  lista.appendChild(li);
+}
+
 function atualizarListaAmigos() {
   const listaAmigos = document.getElementById('listaAmigos');
   listaAmigos.innerHTML = '';
 
   for (let amigo of amigos) {
-    const li = document.createElement('li');
-    const nomeCompleto = formatarNome(amigo);
-    li.textContent = nomeCompleto;
-    listaAmigos.appendChild(li);
+    adicionaItemNaLista(listaAmigos, formatarNome(amigo));
   }
 }
 
@@ -42,9 +45,7 @@ function mostrarAmigoSorteado(amigo) {
   const resultado = document.getElementById('resultado');
   resultado.innerHTML = '';
 
-  const li = document.createElement('li');
-  li.textContent = `O amigo secreto sorteado é: ${amigo}`;
-  resultado.appendChild(li);
+  adicionaItemNaLista(resultado, `O amigo secreto sorteado é: ${amigo}`);
 
   amigos = [];
   atualizarListaAmigos();
