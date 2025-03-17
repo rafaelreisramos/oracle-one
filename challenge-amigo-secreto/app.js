@@ -1,3 +1,5 @@
+let amigos = [];
+
 function formatarNome(nome) {
   return nome
     .split(' ')
@@ -5,20 +7,9 @@ function formatarNome(nome) {
     .join(' ');
 }
 
-const buttonSortearAmigo = Array.from(document.querySelectorAll('button')).find(
-  (button) => button.innerText === 'Sortear amigo'
-);
-buttonSortearAmigo.setAttribute('disabled', '');
-
 function atualizarListaAmigos() {
   const listaAmigos = document.getElementById('listaAmigos');
   listaAmigos.innerHTML = '';
-
-  if (amigos.length > 0) {
-    buttonSortearAmigo.removeAttribute('disabled');
-  } else {
-    buttonSortearAmigo.setAttribute('disabled', '');
-  }
 
   for (let amigo of amigos) {
     const li = document.createElement('li');
@@ -28,7 +19,6 @@ function atualizarListaAmigos() {
   }
 }
 
-let amigos = [];
 function adicionarAmigo() {
   const input = document.getElementById('amigo');
   const amigo = input.value.trim().toLowerCase();
