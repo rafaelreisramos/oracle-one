@@ -48,4 +48,4 @@ O objetivo deste desafio era praticar os conceitos adquiridos sobre lógica de p
 
 ## Acesso ao projeto
 
-Você pode [acessar o código fonte do projeto](https://github.com/rafaelreisramos/oracle-one/tree/main/challenge-amigo-secreto) ou [acessar o app](https://github.com/camilafernanda/GlicoCare/archive/refs/heads/main.zip).
+Você pode [acessar o código fonte do projeto](https://github.com/rafaelreisramos/oracle-one/tree/main/challenge-amigo-secreto) ou [acessar o app](https://rafaelreisramos.github.io/oracle-one/challenge-amigo-secreto/).
